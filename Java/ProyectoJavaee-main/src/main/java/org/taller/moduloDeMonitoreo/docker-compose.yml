@@ -1,0 +1,20 @@
+services:
+  monitoreo:
+    image: philhawthorne/docker-influxdb-grafana:latest
+    container_name: monitoreo
+    ports:
+      - "8086:8086"  # InfluxDB
+      - "3003:3003"  # Grafana
+    volumes:
+      - monitoreo_data:/var/lib/influxdb
+      - monitoreo_grafana:/var/lib/grafana
+    restart: always
+    networks:
+      - monitor-net
+
+volumes:
+  monitoreo_data:
+  monitoreo_grafana:
+
+networks:
+  monitor-net:

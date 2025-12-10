@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="form-container">   
+    <!-- Si NO está logueado -->
+    <ng-container *ngIf="!isLoggedIn; else usuarioMenu">
+      <app-ranking></app-ranking>
+    </ng-container>
+
+    <!-- Si está logueado -->
+    <ng-template #usuarioMenu>
+      <div class="form-container-fluid">
+        <div class="contenedor-principal">
+          <app-post-list></app-post-list> <!-- Aquí se muestra el componente PostList -->
+        </div>
+        <div class="contenedor-derecha">
+          <app-barra-lateral></app-barra-lateral>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>

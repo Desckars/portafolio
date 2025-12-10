@@ -1,0 +1,299 @@
+﻿@page "/menu-corredor"
+@rendermode InteractiveServer
+@using LaboratorioNET.Services
+@inject NavigationManager Navigation
+@inject SesionService SesionService
+@implements IDisposable
+
+<PageTitle>Menú Corredor</PageTitle>
+<div class="background-container">
+@if (!SesionService.EstaAutenticado)
+{
+    <div class="no-autenticado">
+        <p>⚠️ No has iniciado sesión</p>
+        <button @onclick='() => Navigation.NavigateTo("/iniciar_sesion")'>
+            Ir a Iniciar Sesión
+        </button>
+    </div>
+}
+else
+{
+    <div class="main-container">
+        <header class="page-title-box">
+            <h1>SportEvent Manager</h1>
+            <div class="user-info">
+                <span>👤 Bienvenido, <strong>@SesionService.NombreUsuario</strong></span>
+                <button class="btn-cerrar-sesion" @onclick="CerrarSesion">
+                    🚪 Cerrar Sesión
+                </button>
+            </div>
+        </header>
+
+        <div class="menu-box">
+            <h2>Menú Principal</h2>
+
+            <div class="menu-grid">
+                <button class="menu-button" @onclick='() => Navigation.NavigateTo("/info_corredor")'>
+                    📊 Mi Información
+                </button>
+
+                <button class="menu-button" @onclick='() => Navigation.NavigateTo("/preinscripcion")'>
+                    🏃 Inscribirse en Carrera
+                </button>
+
+                <button class="menu-button" @onclick='() => Navigation.NavigateTo("/mis-inscripciones")'>
+                    📝 Mis Inscripciones
+                </button>
+
+                <button class="menu-button" @onclick='() => Navigation.NavigateTo("/info_carreras")'>
+                    🏆 Informacion de Carreras
+                </button>
+            </div>
+        </div>
+    </div>
+}
+</div>
+<style>
+    .background-container {
+        background-image: url('images/2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 15px;
+        box-sizing: border-box;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    /* Barra de scroll mejorada */
+    .background-container::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    .background-container::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+    }
+
+    .background-container::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .background-container::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        box-shadow: 0 0 6px rgba(102, 126, 234, 0.5);
+    }
+
+    .main-container {
+        width: 100%;
+        max-width: 900px;
+        padding: 15px 0;
+        box-sizing: border-box;
+    }
+
+    .page-title-box {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 16px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        border-left: 5px solid #007bff;
+    }
+
+    .page-title-box h1 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        margin: 0;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .user-info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .user-info span {
+        font-size: 13px;
+        color: #555;
+        font-weight: 500;
+    }
+
+    .user-info strong {
+        color: #007bff;
+    }
+
+    .btn-cerrar-sesion {
+        padding: 8px 16px;
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        color: white;
+        border: none;
+        border-radius: 7px;
+        font-size: 11px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 3px 12px rgba(245, 87, 108, 0.25);
+    }
+
+    .btn-cerrar-sesion:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 18px rgba(245, 87, 108, 0.4);
+    }
+
+    .menu-box {
+        background: rgba(255, 255, 255, 0.97);
+        padding: 32px;
+        border-radius: 14px;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        border-top: 5px solid #667eea;
+    }
+
+    .menu-box h2 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        margin: 0 0 28px 0;
+        border-bottom: 3px solid #667eea;
+        padding-bottom: 12px;
+    }
+
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 16px;
+    }
+
+    .menu-button {
+        padding: 20px 16px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 13px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    .menu-button:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    }
+
+    .menu-button:active {
+        transform: translateY(-2px);
+    }
+
+    .no-autenticado {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .no-autenticado p {
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.3);
+        padding: 16px 32px;
+        border-radius: 10px;
+    }
+
+    .no-autenticado button {
+        padding: 12px 28px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 13px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .no-autenticado button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+    }
+
+    @@media (max-width: 768px) {
+        .page-title-box {
+            flex-direction: column;
+            gap: 15px;
+            text-align: center;
+        }
+
+        .user-info {
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+        }
+
+        .menu-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .menu-box {
+            padding: 25px;
+        }
+
+        .page-title-box h1 {
+            font-size: 24px;
+        }
+    }
+</style>
+
+@code {
+    protected override void OnInitialized()
+    {
+        // Verificar si hay sesión activa
+        if (!SesionService.EstaAutenticado)
+        {
+            Navigation.NavigateTo("/iniciar_sesion");
+            return;
+        }
+
+        // Suscribirse a cambios de sesión
+        SesionService.OnCambioSesion += StateHasChanged;
+    }
+
+    private void CerrarSesion()
+    {
+        SesionService.CerrarSesion();
+        Navigation.NavigateTo("/", forceLoad: true);
+    }
+
+    public void Dispose()
+    {
+        // Desuscribirse al destruir el componente
+        SesionService.OnCambioSesion -= StateHasChanged;
+    }
+}

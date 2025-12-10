@@ -1,0 +1,49 @@
+Módulo de Comercio - Proyecto JavaEE
+
+Este módulo forma parte del sistema distribuido desarrollado para gestionar comercios, puntos de venta (POS), y sus operaciones. A continuación se documenta el avance cronológico del desarrollo del módulo de comercio.
+Cronología de Desarrollo
+16/05
+
+    Se diseñaron y crearon las clases del dominio correspondientes al módulo de comercio.
+
+    Se definió la interfaz principal (InterfaceModuloComercio) que expone las operaciones del módulo.
+
+    Se comenzó con una implementación parcial del módulo, cubriendo las funcionalidades básicas.
+
+18/05
+
+    Se desarrolló una emulación del repositorio, utilizando una estructura en memoria para persistencia temporal.
+
+    Se adaptó la implementación del módulo de comercio para interactuar con este repositorio ficticio.
+
+20/05
+
+    Se creó la interfaz de eventos del módulo de comercio, con el objetivo de permitir la comunicación con otros módulos del sistema (por ejemplo, para registrar reclamos o cambios de estado).
+
+    Esta interfaz facilita la futura integración con una arquitectura basada en eventos.
+
+21/05
+
+    Se desarrolló la API REST del módulo de comercio utilizando Jakarta RESTful Web Services.
+
+    Se incluyeron los DTOs (Data Transfer Objects) necesarios para desacoplar la lógica interna del módulo de su representación externa.
+
+    Se realizaron cambios en el archivo pom.xml para incluir las dependencias necesarias para la exposición vía REST.
+
+    Se enfrentaron y resolvieron algunos desafíos técnicos relacionados con la serialización/deserialización y la configuración del entorno (también conocido como el dolor de huevos del día).
+
+Estado Actual
+
+El módulo permite:
+
+    Alta y modificación de comercios.
+
+    Registro de puntos de venta (POS).
+
+    Gestión del estado de los POS.
+
+    Cambios de contraseña.
+
+    Registro de reclamos.
+
+Todas estas funcionalidades están disponibles vía la API REST expuesta por el módulo.

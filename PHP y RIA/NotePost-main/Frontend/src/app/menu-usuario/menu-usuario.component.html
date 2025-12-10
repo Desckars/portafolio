@@ -1,0 +1,18 @@
+<div class="menu-hamburguesa">
+  <button (click)="toggleMenu()">
+
+    <div *ngIf="nombre != null">
+        <img *ngIf="rutaAvatar" [src]="rutaAvatar" alt="avatar" class="avatar-img"/>
+        <span>{{nombre}}</span>
+    </div>
+    </button>
+    <div *ngIf="menuAbierto" class="menu-desplegable ">
+        <ul>
+        <li (click)="goToCrearPost()">Crear post</li>
+        <li (click)="goToCambiarAvatar()">Cambiar avatar</li>
+        <li (click)="goToVerPerfil()">Ver Perfil</li>
+        <li (click)="goToRanking()">Ranking</li>
+        <li (click)="cerrarSesion()">🚪 Cerrar sesión</li>
+        </ul>
+    </div>
+</div>

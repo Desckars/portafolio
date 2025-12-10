@@ -1,0 +1,153 @@
+{
+  "title": "Micrometer - Métricas del sistema",
+  "timezone": "browser",
+  "schemaVersion": 16,
+  "version": 1,
+  "refresh": "10s",
+  "panels": [
+    {
+      "type": "graph",
+      "title": "Pagos (OK / Error)",
+      "id": 1,
+      "datasource": "InfluxDB",
+      "lines": false,
+      "bars": true,
+      "fill": 80,
+      "barWidth": 1,
+      "legend": {
+        "show": true,
+        "alignAsTable": true
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "measurement": "pagos",
+          "groupBy": [
+            { "type": "time", "params": ["$interval"] },
+            { "type": "tag", "params": ["estado"] }
+          ],
+          "select": [
+            [
+              { "type": "field", "params": ["value"] },
+              { "type": "sum", "params": [] }
+            ]
+          ],
+          "orderByTime": "ASC",
+          "alias": "Pago {{estado}}"
+        }
+      ]
+    },
+    {
+      "type": "graph",
+      "title": "Transferencias",
+      "id": 2,
+      "datasource": "InfluxDB",
+      "lines": false,
+      "bars": true,
+      "fill": 80,
+      "barWidth": 1,
+      "legend": {
+        "show": true,
+        "alignAsTable": true
+      },
+      "targets": [
+        {
+          "refId": "B",
+          "measurement": "transferenciaCounter",
+          "groupBy": [
+            { "type": "time", "params": ["$interval"] }
+          ],
+          "select": [
+            [
+              { "type": "field", "params": ["value"] },
+              { "type": "sum", "params": [] }
+            ]
+          ],
+          "orderByTime": "ASC"
+        }
+      ]
+    },
+    {
+      "type": "graph",
+      "title": "Reclamos (Totales y Negativos)",
+      "id": 3,
+      "datasource": "InfluxDB",
+      "lines": false,
+      "bars": true,
+      "fill": 80,
+      "barWidth": 1,
+      "legend": {
+        "show": true,
+        "alignAsTable": true
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "measurement": "reclamoCounter",
+          "tags": [
+            { "key": "etiqueta", "operator": "=", "value": "TOTAL" }
+          ],
+          "groupBy": [
+            { "type": "time", "params": ["$interval"] }
+          ],
+          "select": [
+            [
+              { "type": "field", "params": ["value"] },
+              { "type": "sum", "params": [] }
+            ]
+          ],
+          "orderByTime": "ASC",
+          "alias": "Reclamos Totales"
+        },
+        {
+          "refId": "B",
+          "measurement": "reclamoCounter",
+          "tags": [
+            { "key": "etiqueta", "operator": "=", "value": "NEGATIVO" }
+          ],
+          "groupBy": [
+            { "type": "time", "params": ["$interval"] }
+          ],
+          "select": [
+            [
+              { "type": "field", "params": ["value"] },
+              { "type": "sum", "params": [] }
+            ]
+          ],
+          "orderByTime": "ASC",
+          "alias": "Reclamos Negativos"
+        }
+      ]
+    },
+    {
+      "type": "graph",
+      "title": "Reportes",
+      "id": 4,
+      "datasource": "InfluxDB",
+      "lines": false,
+      "bars": true,
+      "fill": 80,
+      "barWidth": 1,
+      "legend": {
+        "show": true,
+        "alignAsTable": true
+      },
+      "targets": [
+        {
+          "refId": "D",
+          "measurement": "reporteCounter",
+          "groupBy": [
+            { "type": "time", "params": ["$interval"] }
+          ],
+          "select": [
+            [
+              { "type": "field", "params": ["value"] },
+              { "type": "sum", "params": [] }
+            ]
+          ],
+          "orderByTime": "ASC"
+        }
+      ]
+    }
+  ]
+}

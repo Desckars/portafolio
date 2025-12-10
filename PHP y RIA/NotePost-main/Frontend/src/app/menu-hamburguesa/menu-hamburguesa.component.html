@@ -1,0 +1,11 @@
+<div class="menu-hamburguesa">
+  <button (click)="toggleMenu()">☰</button>
+
+  <div *ngIf="menuAbierto" class="menu-desplegable">
+    <ul>
+      <li (click)="goToHome()">🏠 Pagina Principal</li>
+      <li (click)="opcionSeleccionada('filtro')">🔍 Filtro</li>
+      <li (click)="opcionSeleccionada('ranking')">⭐ Ranking</li>
+    </ul>
+  </div>
+</div>

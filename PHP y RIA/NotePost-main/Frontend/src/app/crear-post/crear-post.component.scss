@@ -1,0 +1,106 @@
+/* Estilo general para el contenedor */
+.container-fluid {
+  margin-top: 9rem;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Estilo para el formulario */
+.form-container {
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  width: 100%;
+}
+
+/* Estilo del textarea */
+textarea.nota-contenido {
+  border: 2px solid #f7941d;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  resize: vertical;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none; // <- quita el borde negro por defecto
+}
+
+textarea.nota-contenido:focus {
+  border-color: #f7941d;     // mantiene el borde naranja
+  box-shadow: 0 0 15px #f7941d; // opcional: da un suave resplandor
+}
+
+/* Input de tags y recordatorio */
+input[type="text"],
+input[type="datetime-local"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  margin-top: 4px;
+}
+
+/* Enmarcado para la selección de fondos */
+.fondo-option {
+  display: inline-block;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.fondo-option input[type="radio"] {
+  display: none; // ocultamos el botón de selección
+}
+
+.fondo-option input:checked + label {
+  border-color: #f7941d;
+  box-shadow: 0 0 8px #f7941d;
+  transform: scale(1.05);
+}
+
+/* Botón de enviar */
+.crearPost {
+  background-color: #f7941d;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 24px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.crearPost:hover {
+  background-color: #f7941d;
+}
+
+/* Alerta personalizada */
+.custom-alert {
+  background-color: #fff3cd;
+  border-left: 5px solid #f7941d;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+button[type="submit"] {
+  background-color: #f7941d; // naranja
+  color: white; // texto blanco
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(247, 148, 29, 0.4);
+
+  &:hover:enabled {
+    box-shadow: 0 0 15px rgba(247, 148, 29, 0.8); // más brillo al hover
+    transform: scale(1.02); // leve zoom
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

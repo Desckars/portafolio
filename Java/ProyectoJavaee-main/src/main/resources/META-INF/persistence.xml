@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+                                 https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+
+  <persistence-unit name="miUnidadPersistencia" transaction-type="JTA">
+  <jta-data-source>java:/jdbc/TallerJavaDS</jta-data-source>
+
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+    <!-- Agregá tus clases de entidad aquí -->
+  <class>org.taller.moduloDeTransferencia.dominio.CuentaBancoComercio</class>
+  <class>org.taller.moduloDeTransferencia.dominio.Deposito</class>
+  <class>org.taller.moduloDeTransferencia.dominio.DataFecha</class>
+  
+  <class>org.taller.moduloDeComercio.dominio.POS</class>
+  <class>org.taller.moduloDeComercio.dominio.ReclamoComercio</class>
+  <class>org.taller.moduloDeComercio.dominio.Comercio</class>
+
+  <class>org.taller.moduloDeCompra.dominio.DataCompra</class>
+  <class>org.taller.moduloDeCompra.dominio.DataTarjeta</class>
+  
+    <properties>
+   
+
+      <!-- Opcional: creación automática de tablas -->
+      <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
+
+      <!-- Logeo de consultas SQL -->
+      <property name="eclipselink.logging.level" value="FINE"/>
+    </properties>
+  </persistence-unit>
+</persistence>
