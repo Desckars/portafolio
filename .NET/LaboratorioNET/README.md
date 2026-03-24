@@ -1,325 +1,50 @@
-# 📚 ÍNDICE COMPLETO DE DOCUMENTACIÓN
-
-## 🎯 Sistema de Gestión de Carreras - LaboratorioNET v2.0
-
-### 📖 Documentación (9 Archivos)
-
-#### 1. **RESUMEN_IMPLEMENTACION.md** ⭐ COMIENZA AQUÍ
-- 📋 Descripción general
-- ✅ Objetivos cumplidos
-- 🎯 Características implementadas
-- 📊 Estadísticas del proyecto
-- 🚀 Próximos pasos
-- **Mejor para**: Visión general rápida
-
----
-
-#### 2. **GUIA_VISUAL.md** 🎨 RÁPIDO Y VISUAL
-- 🚀 Comenzar en 5 minutos
-- 📋 Ejemplo de flujo completo
-- 🎮 Comandos del simulador
-- 🌐 Endpoints API rápida
-- 🐛 Troubleshooting visual
-- **Mejor para**: Usuarios que quieren empezar rápido
-
----
-
-#### 3. **INICIO_RAPIDO.md** 🏃 PASO A PASO
-- 🔧 Configuración inicial
-- 💾 Compilación y ejecución
-- 🧪 Configurar datos de prueba
-- ✅ Probar el sistema
-- 📋 Verificar resultados
-- **Mejor para**: Setup y configuración
-
----
-
-#### 4. **SENSOR_SYSTEM_DOCUMENTATION.md** 📖 REFERENCIA COMPLETA
-- 📋 Descripción general
-- 🏗️ Arquitectura de cambios
-- 📡 API Endpoints (7 endpoints)
-- 🧪 Usar el simulador
-- 🗂️ Almacenamiento en Bucket
-- 🔄 Flujo de procesamiento
-- 📊 Lógica de finalización
-- ⚙️ Configuración
-- 🔐 Notas de seguridad
-- 📝 Cambios en UI
-- ✅ Testing
-- **Mejor para**: Consulta de referencia técnica
-
----
-
-#### 5. **CAMBIOS_IMPLEMENTADOS.md** 🔧 DETALLES TÉCNICOS
-- ✅ Cambios realizados
-- 🎯 Objetivo
-- 📊 Cambios por archivo
-- 🔄 Flujo de procesamiento
-- 📊 Lógica de finalización
-- 🔧 Requisitos previos
-- 📦 Dependencias
-- 🚀 Próximos pasos
-- ✨ Ventajas del sistema
-- **Mejor para**: Desarrolladores que quieren entender los cambios
-
----
-
-#### 6. **ARQUITECTURA.md** 🏗️ DIAGRAMAS Y FLUJOS
-- 📊 Componentes implementados
-- 🔄 Flujo de datos paso a paso
-- 📝 Estados de la carrera
-- 💾 Estructura de datos Firestore
-- 🔄 Comparación antes/después
-- 📈 Métricas de monitoreo
-- **Mejor para**: Entender la arquitectura completa
-
----
-
-#### 7. **TROUBLESHOOTING.md** 🔧 SOLUCIÓN DE PROBLEMAS
-- 🚨 10 problemas comunes
-- 🔧 Soluciones paso-a-paso
-- 📊 Tabla de error codes
-- 🔍 Debug logging
-- 📞 Escalación
-- **Mejor para**: Resolver problemas
-
----
-
-#### 8. **CHANGELOG.md** 📝 HISTORIAL DE CAMBIOS
-- 🎯 Versión 2.0
-- ✅ Nuevas características
-- 📊 Comparativa v1.0 vs v2.0
-- 🔄 Detalles de cambios
-- 🚀 Performance
-- 🐛 Bugs solucionados
-- 📋 Roadmap futuro
-- **Mejor para**: Seguimiento de versiones
-
----
-
-#### 9. **ESTRUCTURA_PROYECTO.md** 📦 LAYOUT DEL PROYECTO
-- 🗂️ Árbol de carpetas
-- 📊 Estadísticas
-- 🔧 Componentes técnicos
-- 📈 Índices de calidad
-- 🔐 Seguridad implementada
-- 📚 Documentación incluida
-- **Mejor para**: Entender la estructura completa
-
----
-
-### 📋 Archivos Adicionales
-
-#### 10. **api-requests.http** 🧪 EJEMPLOS HTTP
-- 18 ejemplos de requests
-- POST, GET completos
-- Casos de éxito y error
-- Datos de prueba
-- **Mejor para**: Testing en REST Client
-
----
-
-#### 11. **sensor-simulator.ps1** 🎮 SIMULADOR
-- Script PowerShell parametrizable
-- Simula múltiples sensores
-- Configurable
-- **Mejor para**: Testing sin sensores reales
-
----
-
-## 🗺️ Mapa de Lectura Recomendado
-
-### 👤 Usuario Nuevo
-```
-1. RESUMEN_IMPLEMENTACION.md
-2. GUIA_VISUAL.md
-3. INICIO_RAPIDO.md
-4. Ejecutar proyecto y probar
-```
-
-### 👨‍💻 Desarrollador
-```
-1. CAMBIOS_IMPLEMENTADOS.md
-2. SENSOR_SYSTEM_DOCUMENTATION.md
-3. ARQUITECTURA.md
-4. Revisar código fuente
-5. TROUBLESHOOTING.md (si hay issues)
-```
-
-### 🔧 DevOps/Administrador
-```
-1. INICIO_RAPIDO.md
-2. ARQUITECTURA.md
-3. TROUBLESHOOTING.md
-4. Configurar en producción
-5. CHANGELOG.md para futuras actualizaciones
-```
-
-### 🐛 Si Tienes Problemas
-```
-1. GUIA_VISUAL.md (diagnosticar rápido)
-2. TROUBLESHOOTING.md (solución detallada)
-3. SENSOR_SYSTEM_DOCUMENTATION.md (referencia API)
-```
-
----
-
-## 🎯 Buscar por Tema
-
-### Configuración & Setup
-- ➡️ INICIO_RAPIDO.md
-- ➡️ GUIA_VISUAL.md
-
-### Cómo Usar la API
-- ➡️ SENSOR_SYSTEM_DOCUMENTATION.md
-- ➡️ api-requests.http
-- ➡️ GUIA_VISUAL.md
-
-### Entender la Arquitectura
-- ➡️ ARQUITECTURA.md
-- ➡️ CAMBIOS_IMPLEMENTADOS.md
-- ➡️ ESTRUCTURA_PROYECTO.md
-
-### Resolver Problemas
-- ➡️ TROUBLESHOOTING.md
-- ➡️ GUIA_VISUAL.md
-
-### Detalles Técnicos
-- ➡️ SENSOR_SYSTEM_DOCUMENTATION.md
-- ➡️ CAMBIOS_IMPLEMENTADOS.md
-- ➡️ ARQUITECTURA.md
-
-### Testing
-- ➡️ api-requests.http
-- ➡️ GUIA_VISUAL.md
-- ➡️ SENSOR_SYSTEM_DOCUMENTATION.md
-
----
-
-## 📊 Estadísticas de Documentación
-
-| Archivo | KB | Líneas | Propósito |
-|---------|----|---------| ---------|
-| RESUMEN_IMPLEMENTACION.md | 12 | 400 | Visión general |
-| GUIA_VISUAL.md | 10 | 380 | Referencia rápida |
-| INICIO_RAPIDO.md | 8 | 280 | Setup |
-| SENSOR_SYSTEM_DOCUMENTATION.md | 15 | 450 | Referencia técnica |
-| CAMBIOS_IMPLEMENTADOS.md | 12 | 380 | Detalles técnicos |
-| ARQUITECTURA.md | 10 | 350 | Diagramas |
-| TROUBLESHOOTING.md | 14 | 420 | Solución problemas |
-| CHANGELOG.md | 8 | 250 | Historial |
-| ESTRUCTURA_PROYECTO.md | 10 | 320 | Layout |
-| **TOTAL** | **99** | **3430** | **~35 minutos lectura** |
-
----
-
-## 🔗 Enlaces Rápidos
-
-### Dentro de la Documentación
-- [Cambios implementados](CAMBIOS_IMPLEMENTADOS.md)
-- [Endpoints API](SENSOR_SYSTEM_DOCUMENTATION.md#-api-endpoints)
-- [Troubleshooting](TROUBLESHOOTING.md)
-- [Ejemplos HTTP](api-requests.http)
-
-### Externos
-- [Firebase Console](https://console.firebase.google.com/)
-- [Google Cloud Console](https://console.cloud.google.com/)
-- [ASP.NET Core Docs](https://learn.microsoft.com/en-us/aspnet/core)
-
----
-
-## 💡 Tips de Navegación
-
-### En VS Code
-```
-Ctrl+F: Buscar en archivo
-Ctrl+Shift+F: Buscar en todos los archivos
-Ctrl+P: Ir a archivo rápido
-```
-
-### En PowerShell
-```
-Get-Content RESUMEN_IMPLEMENTACION.md | Out-Host -Paging
-ls -Filter "*.md" | % {Write-Host $_.Name}
-```
-
-### En Navegador
-```
-GitHub: Markdown se renderiza automáticamente
-Local: Abrir .html o usar markdown viewer
-```
-
----
-
-## ✅ Checklist de Lectura
-
-- [ ] RESUMEN_IMPLEMENTACION.md (visión general)
-- [ ] GUIA_VISUAL.md (rápida)
-- [ ] INICIO_RAPIDO.md (setup)
-- [ ] SENSOR_SYSTEM_DOCUMENTATION.md (API)
-- [ ] ARQUITECTURA.md (diseño)
-- [ ] Ejecutar simulador
-- [ ] Verificar en UI
-- [ ] Revisar TROUBLESHOOTING si hay issues
-
----
-
-## 📞 Estructura de Capas
-
-```
-┌─────────────────────────────────────┐
-│   USUARIO / DESARROLLADOR            │
-└────────────┬────────────────────────┘
-             │
-┌────────────▼────────────────────────┐
-│   GUIAS VISUALES                    │
-│   - GUIA_VISUAL.md                  │
-│   - INICIO_RAPIDO.md                │
-└────────────┬────────────────────────┘
-             │
-┌────────────▼────────────────────────┐
-│   REFERENCIA TÉCNICA                │
-│   - SENSOR_SYSTEM_DOCUMENTATION.md  │
-│   - ARQUITECTURA.md                 │
-└────────────┬────────────────────────┘
-             │
-┌────────────▼────────────────────────┐
-│   CÓDIGO FUENTE                     │
-│   - Services/                       │
-│   - Controllers/                    │
-│   - Entities/                       │
-└────────────┬────────────────────────┘
-             │
-┌────────────▼────────────────────────┐
-│   GOOGLE CLOUD & FIRESTORE          │
-│   - Bucket Storage                  │
-│   - Database                        │
-└─────────────────────────────────────┘
-```
-
----
-
-## 🚀 Próximos Pasos
-
-1. **Lectura** → Elegir documento según necesidad
-2. **Configuración** → Seguir INICIO_RAPIDO.md
-3. **Testing** → Usar GUIA_VISUAL.md
-4. **Desarrollo** → Consultar SENSOR_SYSTEM_DOCUMENTATION.md
-5. **Problemas** → Revisar TROUBLESHOOTING.md
-
----
-
-## 📞 Soporte
-
-- **Preguntas generales**: RESUMEN_IMPLEMENTACION.md
-- **Cómo usar**: GUIA_VISUAL.md + INICIO_RAPIDO.md
-- **API Reference**: SENSOR_SYSTEM_DOCUMENTATION.md
-- **Problemas**: TROUBLESHOOTING.md
-- **Arquitectura**: ARQUITECTURA.md + CAMBIOS_IMPLEMENTADOS.md
-
----
-
-**Última Actualización**: Noviembre 12, 2025  
-**Versión**: 2.0  
-**Estado**: ✅ Completamente Documentado
+1. Introducción
 
+La región se ha consolidado como un destacado centro para la realización de eventos deportivos de convocatoria masiva. A eventos tradicionales como la "Clásica Carrera 10K de San Fernando" del 6 de enero, se han sumado competencias de gran envergadura como el Ironman 70.3 y la Maratón de Punta del Este, esta última con cerca de 5,000 participantes en su última edición.
+
+Esta creciente demanda de eventos requiere soluciones tecnológicas robustas que optimicen la gestión, mejoren sustancialmente la experiencia de los atletas y simplifiquen las tareas operativas de los organizadores. La presente propuesta tiene como objetivo desarrollar un sistema integral para abordar estos desafíos.
+
+2. Objetivo del Proyecto
+
+El objetivo principal del taller es analizar, diseñar e implementar una aplicación web bajo la plataforma .NET, denominada SportEvent Manager, para la gestión integral de carreras deportivas.
+
+3. Fundamentación de la Propuesta
+
+Esta propuesta se caracteriza por su enfoque general y abierto, simulando las condiciones iniciales de un proyecto de software en el ámbito profesional. 
+A diferencia  del taller Java, donde el desarrollo de la solución estaba predeterminado (dividido en instancias concretas), en esta oportunidad, se presenta un listado inicial de necesidades surgidas de una hipotética entrevista preliminar con el cliente.
+
+Cada equipo de desarrollo deberá asumir la responsabilidad de:
+Realizar un análisis y priorización de los requerimientos (visualizar la solución completa).
+Definir una planificación iterativa e incremental.
+Tomar decisiones técnicas y arquitectónicas fundamentadas.
+Entregar una versión funcional (Prueba de Concepto) que demuestre la viabilidad del proyecto.
+
+Este enfoque fomenta la autonomía, la gestión de proyecto y la capacidad de adaptación, habilidades críticas en el desarrollo de software real.
+
+4. Principales Requisitos Funcionales
+
+*La siguiente es una lista de requerimientos a ser tomados en cuenta. Es un punto de partida para orientar la solución final. 
+
+*El sistema deberá contemplar, como punto de partida, las siguientes funcionalidades:
+Gestión Multi-eventos: Capacidad para crear y administrar diferentes carreras con configuraciones independientes.
+
+*Inscripción Online: permitir a los corredores inscribirse (via web) en los eventos disponibles.
+Administración de Corredores: Gestionar el proceso de asignación y retiro de números de dorsal o kits de competencia. 
+
+*Toma de Tiempos: Registrar y consultar tiempos parciales (en puntos de control específicos) y el tiempo final de cada participante.
+
+*Seguimiento en Tiempo Real: permitir el seguimiento aproximado de la posición de un corredor durante el transcurso de la carrera.
+
+*Configuración de Puntos de Control: permitir la definición y configuración de los puntos de la ruta donde se capturan los tiempos mediante la lectura de chips RFID u otra tecnología.
+
+*Automación de la Meta: Implementar una funcionalidad que, al detectar el cruce de la meta, muestre automáticamente el nombre del corredor en un display o interfaz pública.
+----------------------------------------------------------------------------------------------------------
+
+Tecnologia: ASP.NET Core Blazor
+Base de datos: MongoDB
+Nombre de la Base de Datos: TallerNET
+Detalles de conexcion:
+    "ConnectionString": "mongodb://localhost:27017",
+Comandos para la ejecucion: dotnet run
+
+Para probar la simulacion hay que entrar como "admin"(no hay forma de entrar como admin, solo creando un corredor y desde la base de datos cambiar el rol a "admin"), darle a la opcion de "simular carrera" y le das a "buscar", ahi apareceran las carreras, seleccionamos una, reseteamos carrera en caso de que ya alla ocurrido, y al simular veremos progreso en modo de tiempo y porcentaje.

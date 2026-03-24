@@ -1,3 +1,4 @@
+(Proyecto ejecutado en Linux)
 # Módulo de Comercio - Proyecto JavaEE
 
 Este módulo es parte de un sistema distribuido para la gestión de comercios y puntos de venta (POS). Proporciona una API REST para administrar comercios, registrar y gestionar POS, realizar cambios de contraseña y registrar reclamos. (dentro)
@@ -27,22 +28,31 @@ Este módulo es parte de un sistema distribuido para la gestión de comercios y 
 
 - Java 8+
 - Maven
-- Servidor Java EE (WildFly, Payara, GlassFish, etc.)
+- Servidor Java EE (WildFly)
+- Docker
+# Programas
+Wildfly: Utilizado para levantar distintos servicios a la vez("BanoClienteMock", "EtiquetadoAPI" y "ServicioMedioPagoMock) utilizando los .war de los diversos proyectos.
+Tener en "wildfly-***/standalone/deployments/" los siguientes archivos:
+"BanoClienteMock.war"
+"EtiquetadoAPI.war"
+"ServicioMedioPagoMock.war"
+"mysql-connector-**.jar"
+(Los archivos anteriores estan la carpeta documentacion antes del proyecto raiz)
+
 
 ## Ejemplo de ejecución
 
 Compila el proyecto desde la raíz:
-
-```sh
 mvn clean install
-```
 
-Despliega el archivo WAR generado en tu servidor Java EE.
+Ejecutar wildfly:
+DESDE "wildfly.**/bin" ejecutar en terminal standalone.sh
+
+Ejecutar Docker:
+sudo docker start monitoreo
 
 ## Créditos
 
 Desarrollado como parte del Proyecto JavaEE - Taller de Programación.
 
 ---
-
-Para más detalles sobre endpoints y ejemplos de uso, consulta la documentación de la API REST en el módulo.
