@@ -1,3 +1,4 @@
+Realizado y testeado en Linux
 # NotePost
 
 NotePost es una aplicación web para la gestión de notas, posts y recordatorios, con funcionalidades sociales como amigos, likes y personalización de usuario. El proyecto está dividido en un backend PHP y un frontend Angular.
