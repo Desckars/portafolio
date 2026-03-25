@@ -1,3 +1,4 @@
+Diseñado y testeado en Windows
 Descripcion
 Necesitamos crear una aplicación Movil para la gestión de un Hostel.
 Es una aplicacion “ad hoc” para el hostel “Mochileros”, esto quiere decir que no va a haber mas de
