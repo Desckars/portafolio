@@ -1,4 +1,4 @@
-(Proyecto ejecutado en Linux)
+Diseñado y testeado en Linux
 # Módulo de Comercio - Proyecto JavaEE
 
 Este módulo es parte de un sistema distribuido para la gestión de comercios y puntos de venta (POS). Proporciona una API REST para administrar comercios, registrar y gestionar POS, realizar cambios de contraseña y registrar reclamos. (dentro)
