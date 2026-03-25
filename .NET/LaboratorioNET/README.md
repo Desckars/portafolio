@@ -1,3 +1,4 @@
+Diseñado y testeado en Windows
 1. Introducción
 
 La región se ha consolidado como un destacado centro para la realización de eventos deportivos de convocatoria masiva. A eventos tradicionales como la "Clásica Carrera 10K de San Fernando" del 6 de enero, se han sumado competencias de gran envergadura como el Ironman 70.3 y la Maratón de Punta del Este, esta última con cerca de 5,000 participantes en su última edición.
